@@ -28,6 +28,6 @@ public class CalculatriceTest {
 
     @Test
     public void testMinus() {
-        assertEquals(5.0f, calculator.minus(5.0f, 3.0f)); //doit retourner erruer car mauvais valeur attendu
+        assertEquals(2.0f, calculator.minus(5.0f, 3.0f)); //doit retourner erruer car mauvais valeur attendu
     }
 }
