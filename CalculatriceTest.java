@@ -13,21 +13,30 @@ public class CalculatriceTest {
 
     @Test
     public void testAdd() {
-        assertEquals(5.0f, calculator.add(2.0f, 3.0f));
+        assertEquals(5, calculator.add(2, 3));
+        //assertEquals(85644, calculator.add(2, 3), "marche pas message d'erreur explicit");
     }
+
 
     @Test
     public void testDiv() {
-        assertEquals(2.0f, calculator.div(4.0f, 2.0f));
+        assertEquals(2, calculator.div(4, 2));
+    }
+
+
+    @Test
+    public void testDivZero() {
+        assertThrows(ArithmeticException.class, () -> calculator.div(444564564.12f, 0));
     }
 
     @Test
     public void testMult() {
-        assertEquals(6.0f, calculator.mult(2.0f, 3.0f));
+        assertEquals(6, calculator.mult(2, 3));
     }
 
     @Test
     public void testMinus() {
-        assertEquals(2.0f, calculator.minus(5.0f, 3.0f));
+        assertEquals(2, calculator.minus(5, 3));
+        assertNotEquals(7892, calculator.minus(5, 3));
     }
 }
