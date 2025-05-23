@@ -26,4 +26,8 @@ public class CalculatriceTest {
         assertEquals(6.0f, calculator.mult(2.0f, 3.0f));
     }
 
+    @Test
+    public void testMin() {
+        assertEquals(5.0f, calculator.minus(5.0f, 3.0f)); //doit retourner erreur car on a pas creer la methode minus
+    }
 }
